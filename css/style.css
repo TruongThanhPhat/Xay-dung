@@ -1,239 +1,256 @@
 /* Reset cơ bản */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  /* Container chung */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-  
-  /* Header */
-  header {
-    background: #000;
-    color: #fff;
-    padding: 10px 0;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Container chung */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Header */
+header {
+  background: #000;
+  color: #fff;
+  padding: 10px 0;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  max-height: 50px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #e8491d;
+}
+
+/* Hero Section */
+.hero {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  background: #e8491d;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Sections */
+.services, .about, .projects, .pricing, .contact {
+  padding: 60px 0;
+}
+
+.services h2, .projects h1, .about h1, .pricing h1, .contact h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Dịch vụ */
+.service-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.service-item {
+  flex: 1;
+  margin: 10px;
+  max-width: 30%;
+  text-align: center;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+.service-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Projects Preview */
+.projects-preview .project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.project-item {
+  flex: 1;
+  max-width: 30%;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.project-item img {
+  width: 100%;
+  height: auto;
+}
+.project-item h3 {
+  padding: 15px;
+  background: #f4f4f4;
+}
+
+/* Project Gallery */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project-gallery .project-item {
+  flex: 1;
+  max-width: 30%;
+  margin: 10px;
+  background: #f4f4f4;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+.project-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Pricing table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+table, th, td {
+  border: 1px solid #ddd;
+}
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+th {
+  background: #e8491d;
+  color: #fff;
+}
+
+/* Contact form */
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact form input, .contact form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact form button {
+  padding: 10px;
+  background: #e8491d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Header thay đổi thành dạng cột */
   .header-container {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-  }
-  .logo img {
-    max-height: 50px;
   }
   nav ul {
-    list-style: none;
-    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
   }
   nav ul li {
-    margin-left: 20px;
+    margin: 10px 0;
   }
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  nav ul li a.active,
-  nav ul li a:hover {
-    color: #e8491d;
-  }
-  
-  /* Hero Section */
+  /* Điều chỉnh phần Hero */
   .hero {
-    height: 500px;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  .hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-  }
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 600px;
+    height: auto; /* Chiều cao tự động điều chỉnh */
+    padding: 60px 20px;
   }
   .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 32px;
   }
   .hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 18px;
   }
-  .btn {
-    display: inline-block;
-    background: #e8491d;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+  /* Các khối dịch vụ, dự án,… chiếm 100% chiều rộng */
+  .service-item, .project-item, .project-gallery .project-item {
+    max-width: 100%;
+    margin: 10px 0;
   }
-  
-  /* Sections */
-  .services, .about, .projects, .pricing, .contact {
-    padding: 60px 0;
+  .container {
+    padding: 10px 0;
   }
-  
-  .services h2, .projects h1, .about h1, .pricing h1, .contact h1 {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  /* Dịch vụ */
-  .service-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .service-item {
-    flex: 1;
-    margin: 10px;
-    max-width: 30%;
-    text-align: center;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 5px;
-  }
-  .service-item img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  /* Projects Preview */
-  .projects-preview .project-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-  .project-item {
-    flex: 1;
-    max-width: 30%;
-    margin: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  .project-item img {
-    width: 100%;
-    height: auto;
-  }
-  .project-item h3 {
-    padding: 15px;
-    background: #f4f4f4;
-  }
-  
-  /* Project Gallery */
-  .project-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .project-gallery .project-item {
-    flex: 1;
-    max-width: 30%;
-    margin: 10px;
-    background: #f4f4f4;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-  }
-  .project-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  /* Pricing table */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-  }
-  table, th, td {
-    border: 1px solid #ddd;
-  }
-  th, td {
-    padding: 12px;
-    text-align: center;
-  }
-  th {
-    background: #e8491d;
-    color: #fff;
-  }
-  
-  /* Contact form */
-  .contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .contact form input, .contact form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  .contact form button {
-    padding: 10px;
-    background: #e8491d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Footer */
-  footer {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-    }
-    nav ul {
-      flex-direction: column;
-      margin-top: 10px;
-    }
-    nav ul li {
-      margin: 10px 0;
-    }
-    .service-item, .project-item, .project-gallery .project-item {
-      max-width: 100%;
-    }
-    .hero h1 {
-      font-size: 32px;
-    }
-  }
-  
+}
