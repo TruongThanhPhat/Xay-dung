@@ -177,7 +177,7 @@ nav ul li a:hover {
   width: 100%;
   height: 220px;         /* Chiều cao cố định để đảm bảo đồng nhất */
   object-fit: contain;   /* Hiển thị toàn bộ ảnh, không cắt */
-  background: #f0f0f0;   /* Màu nền cho phần trống nếu ảnh không lấp đầy khung */
+  background: #e9e8e8;   /* Màu nền cho phần trống nếu ảnh không lấp đầy khung */
 }
 
 /* Project Content: cho phép hiển thị đầy đủ nội dung */
@@ -203,17 +203,14 @@ nav ul li a:hover {
   color: #555;
   line-height: 1.5;
   text-align: center;
-  /* Các thuộc tính cắt dòng đã được loại bỏ để hiển thị đầy đủ */
 }
 
-/* Responsive: Tablet (2 dự án 1 hàng) */
 @media (max-width: 992px) {
   .projects .project-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Responsive: Mobile (2 dự án 1 hàng) */
 @media (max-width: 600px) {
   .projects .project-gallery {
     grid-template-columns: repeat(2, 1fr);
