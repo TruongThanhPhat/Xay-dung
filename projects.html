@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dự án - Trường Thành Phát</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <!-- Nếu cần hiển thị 2 ảnh/row trên mobile, chỉnh sửa lại media query trong CSS:
+       @media (max-width: 600px) {
+         .projects .project-gallery {
+           grid-template-columns: repeat(2, 1fr);
+         }
+       }
+  -->
 </head>
 <body>
   <!-- Header -->
@@ -25,25 +32,72 @@
     </div>
   </header>
 
-  <!-- Nội dung Dự Án -->
+  <!-- Projects Section -->
   <section class="projects">
     <div class="container">
       <h1>Dự án của Trường Thành Phát</h1>
       <div class="project-gallery">
+        <!-- Project Item 1 -->
         <div class="project-item">
           <img src="images/project1.jpg" alt="Dự án cao cấp">
-          <h3>Dự án cao cấp</h3>
-          <p>Mô tả dự án cao cấp mang phong cách hiện đại và đẳng cấp.</p>
+          <div class="project-content">
+            <h3>Dự án cao cấp</h3>
+            <p>Thiết kế theo phong cách hiện đại, dự án mang đến không gian sống đẳng cấp, hài hòa giữa thiên nhiên và kiến trúc. Từng chi tiết đều được chăm chút kỹ lưỡng, đáp ứng nhu cầu về sự tiện nghi, sang trọng và bền vững cho chủ nhân.</p>
+          </div>
         </div>
+        <!-- Project Item 2 -->
         <div class="project-item">
-          <img src="images/project2.jpg" alt="Văn phòng hiện đại">
-          <h3>Nhà ở tiện nghi</h3>
-          <p>Mô tả dự án văn phòng với không gian mở và tiện nghi.</p>
+          <img src="images/project2.jpg" alt="Nhà ở tiện nghi">
+          <div class="project-content">
+            <h3>Nhà ở tiện nghi</h3>
+            <p>Mang phong cách hiện đại, dự án nhà ở tiện nghi được thiết kế với không gian mở, ánh sáng tự nhiên chan hòa và tiện ích đẳng cấp. Đáp ứng hoàn hảo nhu cầu sinh hoạt, làm việc và nghỉ dưỡng trong cùng một không gian sống lý tưởng.</p>
+          </div>
         </div>
+        <!-- Project Item 3 -->
         <div class="project-item">
-          <img src="images/project3.jpg" alt="Khu công nghiệp">
-          <h3>Nhà phố</h3>
-          <p>Mô tả dự án khu công nghiệp với quy mô lớn và an toàn.</p>
+          <img src="images/project3.jpg" alt="Nhà phố hiện đại">
+          <div class="project-content">
+            <h3>Nhà phố hiện đại</h3>
+            <p>Công ty Trường Thành Phát tự hào giới thiệu mẫu nhà phố với thiết kế sang trọng, tối ưu công năng và không gian xanh. Kiến trúc hiện đại, vật liệu cao cấp, phù hợp cho nhu cầu an cư và kinh doanh. Cam kết chất lượng, tiến độ nhanh chóng, pháp lý minh bạch.</p>
+          </div>
+        </div>
+        <!-- Project Item 4 -->
+        <div class="project-item">
+          <img src="images/project4.jpg" alt="Nhà phố Trường Thành Phát">
+          <div class="project-content">
+            <h3>🏡 Nhà phố Trường Thành Phát</h3>
+            <p>
+              Dự án nhà phố nổi bật với thiết kế kiến trúc tinh tế, không gian rộng mở và công năng vượt trội.<br>
+              🔹 Quy mô lớn: Đáp ứng nhu cầu sinh hoạt, kinh doanh đa dạng.<br>
+              🔹 An toàn tuyệt đối: Kết cấu bền vững, tiêu chuẩn xây dựng cao cấp.<br>
+              🔹 Phong cách hiện đại: Kết hợp hài hòa giữa thiên nhiên và đường nét kiến trúc mạnh mẽ.
+            </p>
+          </div>
+        </div>
+        <!-- Project Item 5 -->
+        <div class="project-item">
+          <img src="images/project5.jpg" alt="Dự án xanh 2025">
+          <div class="project-content">
+            <h3>🏡 Villa Cao Cấp – Không Gian Sống sang trọng giữa lòng Thành Phố</h3>
+            <p>🌿 Không gian xanh đa tầng: Mảng xanh đan xen từ mặt tiền đến sân vườn trên mái, đem lại cảm giác mát mẻ quanh năm.
+
+              ☀️ Giếng trời trung tâm: Thiết kế thông tầng, tối ưu ánh sáng tự nhiên và đối lưu không khí trong toàn bộ villa.
+              
+              🏢 Mặt tiền kính rộng: Tầm nhìn mở rộng tối đa, kết nối mạnh mẽ giữa không gian bên trong và cảnh quan bên ngoài.
+              
+              🛋️ Nội thất sang trọng: Phối hợp giữa vật liệu cao cấp và đường nét thiết kế hiện đại, tạo nên một tổng thể tinh tế, đẳng cấp.</p>
+          </div>
+        </div>
+        <!-- Project Item 6 -->
+        <div class="project-item">
+          <img src="images/project6.jpg" alt="Shophouse hiện đại">
+          <div class="project-content">
+            <h3>Nhà ở hiện đại</h3>
+            <p>✨ Thiết kế hiện đại và tinh tế:
+            🏢 Kiến trúc mở:kết hợp ban công kính trong suốt, tối ưu ánh sáng tự nhiên và tạo cảm giác không gian rộng rãi.
+            🌿 Mảng xanh hài hòa: Sân vườn trên mái giúp cân bằng khí hậu và mang thiên nhiên vào từng ngóc ngách ngôi nhà.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -52,7 +106,7 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Trường Thành Phát - Thiết kế & Xây dựng.</p>
+      <p>Trường Thành Phát - Thiết kế &amp; Xây dựng.</p>
     </div>
   </footer>
 </body>
