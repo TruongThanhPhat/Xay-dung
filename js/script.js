@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     if(contactForm){
       contactForm.addEventListener("submit", function(e){
         e.preventDefault();
-        alert("Cảm ơn bạn đã liên hệ với VietMuong!");
+        alert("Cảm ơn bạn đã liên hệ với Trường Thành Phát!");
         contactForm.reset();
       });
     }
